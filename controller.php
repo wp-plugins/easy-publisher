@@ -73,9 +73,6 @@
 			global $id;
 			global $wp_admin_bar;
 
-			// Are we viewing a post or page edit?
-			if (!is_admin() || !is_admin_bar_showing()) return false;
-
 			if (in_array( $pagenow, array( 'post-new.php' ))) {
 
 				if (isset($_REQUEST['post_type'])) {

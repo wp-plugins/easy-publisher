@@ -81,6 +81,10 @@ if (!class_exists('MCEasyPublisher')) {
 
 			// DoDisplayButtons knows what to do and when to do it's
 			// function.
+			
+			// Are we viewing a post or page edit?
+			if (!is_admin() || !is_admin_bar_showing()) return false;
+			
 			$this->controller->DoDisplayButtons();
 
 		}
