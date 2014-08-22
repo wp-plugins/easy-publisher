@@ -6,14 +6,14 @@
 Plugin Name: Easy Publisher
 Description: Places the Update and Preview buttons conveniently in the Admin Bar.
 Version: 1.0.0
-Author: Marketing Clique, LLC. - David VogelPohl and Andrew Oikle)
+Author: Marketing Clique, LLC. - David Vogelpohl and Andrew Oikle
 Author URI: http://www.marketingclique.com/
 Requires at least: 3.7.4
 Tested up to: 3.9.2
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
- */
+*/
 
 /*
  This program is free software; you can redistribute it and/or
