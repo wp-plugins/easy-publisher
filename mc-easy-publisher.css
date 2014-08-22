@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+#wp-admin-bar-MCEPostTitle div {
+	font-weight: lighter;
+}
+
+#wp-admin-bar-MCEPostTitle div:hover,
+#wp-admin-bar-MCEPostTitle:hover {
+	color: inherit !important;
+	background-color: inherit !important;
+	cursor: default;
+}
+
+/* 
+	Modifications to the admin bar and fullscreen bar
+	when 'Show Admin Bar in Fullscreen' is enabled.
+*/
+
+#wpadminbar.mcep_show_admin_bar_in_fullscreen {
+	display: block !important;
+	z-index: 200000 !important;
+}
+
+#fullscreen-topbar.mcep_show_admin_bar_in_fullscreen {
+	margin: 32px 0 !important;
+}
+
+#wp-content-wrap.mcep_show_admin_bar_in_fullscreen {
+	margin-top: 20px !important;
+}
+
+.wp-fullscreen-active #fullscreen-topbar.keep_visible {
+	opacity: 1 !important;
+}
+
+.mcViewPostButton {
+	margin: 0 4px;
+}
+
+.mc_fullscreen_view_post_button {
+	float: right;
+}

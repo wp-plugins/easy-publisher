@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+#EasyPublisherSettingsPage {
+		
+}
+
+#EasyPublisherSettingsPage p {
+	
+}
+
+#EasyPublisherSettingsPage .checkboxItem {
+	margin: 8px 0;
+}
+
+#EasyPublisherSettingsPage .checkboxItem input {
+	
+}
+
+#EasyPublisherSettingsPage .checkboxItem label {
+	
+}
+
+#EasyPublisherSettingsPage .buttonPanel {
+	margin: 20px 0;
+}
+
+#EasyPublisherSettingsPage .buttonPanel input {
+	cursor: pointer;
+}
+
+#EasyPublisherSettingsPage .errorMessage {
+	padding: 14px;
+	background-color: #FCCFCF;
+	border: 2px solid #ff5555;
+}
+
+#EasyPublisherSettingsPage .successMessage {
+	padding: 14px;
+	background-color: #CFDFFC;
+	border: 2px solid #5555FF;
+}
