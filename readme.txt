@@ -62,11 +62,11 @@ WordPress development firm.  Enjoy!
 
 == Screenshots ==
 
-`/assets/screenshot-1.jpg`
+1.
 
-`/assets/screenshot-2.jpg`
+2.
 
-`/assets/screenshot-3.jpg`
+3.
 
 == Changelog ==
 
