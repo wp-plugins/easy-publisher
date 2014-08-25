@@ -4,9 +4,9 @@
  */
 /*
 Plugin Name: Easy Publisher
-Description: Places the Update and Preview buttons conveniently in the Admin Bar.
+Description: Add easy-to-access publishing tools to your posts & pages.
 Version: 1.0.0
-Author: Marketing Clique, LLC. - David Vogelpohl and Andrew Oikle
+Author: Marketing Clique, Andrew Oikle
 Author URI: http://www.marketingclique.com/
 Requires at least: 3.7.4
 Tested up to: 3.9.2

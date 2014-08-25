@@ -1,5 +1,5 @@
 === Easy Publisher ===
-Contributors: Marketing Clique, LLC. - David Vogelphol and Andrew Oikle
+Contributors: Marketing Clique, Andrew Oikle
 Tags: admin bar, preview, update, publish, post title
 Requires at least: 3.7.4
 Tested up to: 3.9.2
@@ -7,7 +7,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Places Preview, Update, Publish, and Page Title in your Admin Bar.
+Add easy-to-access publishing tools to your posts & pages.
 
 == Description ==
 
@@ -45,20 +45,34 @@ editing so you'll know what page you're on when working in multiple tabs.
 
 == Frequently Asked Questions ==
 
-Q: "Why is Easy Publisher good for me?"
-A: It can save you the hassle of having to scroll up to the top of the page
-   you are editing to access the Preview, Update, or Publish buttons.  It also
-   shows you the title of the page you are editing in the Admin bar.
+Q: How does Easy Publisher save time?
+A: By adding view, preview, and update links to the floating admin bars in 
+WordPress, Easy Publisher allows you to more quickly edit content without 
+the constant need to scroll up the page to find the links in the standard 
+WordPress interface.  TLDR: You don’t have to scroll so much.
+
+Q: What if I don’t need all the links Easy Publisher adds to the admin bar?
+A: Just click “Settings” -> “Easy Publisher” to turn on and off links and 
+features with Easy Publisher.  It’s super easy!
+
+Q: Is there a premium version of Easy Publisher?
+A: Nope.  Easy Publisher and all the great features are 100% free.  Easy 
+Publisher was created and supported by Marketing Clique a well known 
+WordPress development firm.  Enjoy!
+
+== Screenshots ==
+
+`/assets/screenshot-1.png`
+
+`/assets/screenshot-2.png`
+
+`/assets/screenshot-3.png`
 
 == Changelog ==
 
 = 1.0.0 =
-*   First release
+2014.08.22 - First release
 
 == Upgrade Notice ==
 
 There is no need to upgrade just yet.
-
-== Screenshots ==
-
-Screenshots of this plugin can be found TODO .
