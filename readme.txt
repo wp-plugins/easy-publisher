@@ -16,21 +16,16 @@ in the Admin Bar to make editing content in WordPress much easier!
 Easy Publisher also displays the Title of the post or page you are 
 editing so you'll know what page you're on when working in multiple tabs.
 
-= Plugin Features =
-
 <iframe width="420" height="315" src="//www.youtube.com/embed/WtWTPBQOV4M" 
 frameborder="0" allowfullscreen></iframe>
 
+= Plugin Features =
+
 * Places the Preview Changes, Update, Publish, button in the Admin Bar.
-
 * Displays the Title of the post or page you are editing.
-
 * Changes the 'View Post' button to view in a new tab.
-
 * Individual features can be turned off in the settings page.
-
 * Extremely lightweight.  Only 19.9 kB uncompressed.
-
 * Saves headaches caused by having to scroll up to preview, update, or 
 publish, or need to see the title of the page you are editing.
 
