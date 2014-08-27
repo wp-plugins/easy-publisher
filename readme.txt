@@ -46,18 +46,21 @@ publish, or need to see the title of the page you are editing.
 
 == Frequently Asked Questions ==
 
-Q: How does Easy Publisher save time?
-A: By adding view, preview, and update links to the floating admin bars in 
+= How does Easy Publisher save time? =
+
+By adding view, preview, and update links to the floating admin bars in 
 WordPress, Easy Publisher allows you to more quickly edit content without 
 the constant need to scroll up the page to find the links in the standard 
 WordPress interface.  TLDR: You don’t have to scroll so much.
 
-Q: What if I don’t need all the links Easy Publisher adds to the admin bar?
-A: Just click "Settings" -> "Easy Publisher" to turn on and off links and 
+= What if I don’t need all the links Easy Publisher adds to the admin bar? =
+
+Just click "Settings" -> "Easy Publisher" to turn on and off links and 
 features with Easy Publisher.  It’s super easy!
 
-Q: Is there a premium version of Easy Publisher?
-A: Nope.  Easy Publisher and all the great features are 100% free.  Easy 
+= Is there a premium version of Easy Publisher? =
+
+Nope.  Easy Publisher and all the great features are 100% free.  Easy 
 Publisher was created and supported by Marketing Clique a well known 
 WordPress development firm.  Enjoy!
 
