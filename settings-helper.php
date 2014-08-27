@@ -11,6 +11,7 @@
 		const SETTING_SHOW_PREVIEW_BUTTON_IN_FS = 'showPreviewButtonInFullscreenBar';
 		const SETTING_SHOW_VIEWPOST_BUTTON_IN_FS = 'showViewPostButtonInFullscreenBar';
 		const SETTING_SHOW_ADMINBAR_IN_FULLSCREEN = 'showAdminBarInFullscreen';
+		const SETTING_VIEW_POST_IN_NEW_TAB = 'viewPostInNewTab';
 		
 		private static $settings = null;
 		
@@ -77,6 +78,8 @@
 		public $showPreviewButtonInFullscreenBar = true;
 		public $showViewPostButtonInFullscreenBar = true;
 		public $showAdminBarInFullscreen = false;
+		public $viewPostInNewTab = true;
+		
 	}
 
 ?>

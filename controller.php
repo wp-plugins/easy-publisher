@@ -56,6 +56,11 @@
 				MCEasyPublisherSettingsManager::SETTING_SHOW_ADMINBAR_IN_FULLSCREEN,
 				isset($_REQUEST[MCEasyPublisherSettingsManager::SETTING_SHOW_ADMINBAR_IN_FULLSCREEN]));
 
+			MCEasyPublisherSettingsManager::SetSetting(
+				MCEasyPublisherSettingsManager::SETTING_VIEW_POST_IN_NEW_TAB,
+				isset($_REQUEST[MCEasyPublisherSettingsManager::SETTING_VIEW_POST_IN_NEW_TAB]));
+				
+			
 			try {
 				MCEasyPublisherSettingsManager::SaveSettings();
 			} catch (Exception $ex) {
@@ -173,6 +178,10 @@
 			$this->settings[MCEasyPublisherSettingsManager::SETTING_SHOW_VIEWPOST_BUTTON_IN_FS] =
 				MCEasyPublisherSettingsManager::GetSetting(
 				MCEasyPublisherSettingsManager::SETTING_SHOW_VIEWPOST_BUTTON_IN_FS);
+
+			$this->settings[MCEasyPublisherSettingsManager::SETTING_VIEW_POST_IN_NEW_TAB] =
+				MCEasyPublisherSettingsManager::GetSetting(
+				MCEasyPublisherSettingsManager::SETTING_VIEW_POST_IN_NEW_TAB);
 				
 			
 			$script_params = array( 'settings' => $this->settings);

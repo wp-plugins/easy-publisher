@@ -27,6 +27,10 @@
 	$showAdminBarInFullscreenChecked = (MCEasyPublisherSettingsManager::GetSetting(
 			MCEasyPublisherSettingsManager::SETTING_SHOW_ADMINBAR_IN_FULLSCREEN)) ?
 			'checked="checked"' :'';
+
+	$viewPostInNewTabChecked = (MCEasyPublisherSettingsManager::GetSetting(
+			MCEasyPublisherSettingsManager::SETTING_VIEW_POST_IN_NEW_TAB)) ?
+			'checked="checked"' :'';
 	
 	$messages = $this->controller->messages;
 	$errors = $this->controller->errors;
@@ -62,7 +66,7 @@
 	<p>Please <a href="mailto:ep@marketingclique.com">email us</a> for feature requests.</p>
 	<p>Thanks for using Easy Publisher!</p>
 	
-	<h3>Admin Bar Settings</h3>
+	<h3>Main Admin Bar Settings</h3>
 	
 	<form id="easyUpdaterSettingsForm" name="easyUpdaterSettingsForm" 
 		action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post">
@@ -74,51 +78,57 @@
 		<div class="checkboxItem">
 			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_PREVIEW_BUTTON_IN_ABAR ?>"
 				id="showPreviewABButtonCheckbox" value="1" <?php echo $showPreviewButtonInAdminBarChecked ?> />
-			<label for="showPreviewABButtonCheckbox">Show Preview Button in Admin Bar</label>
+			<label for="showPreviewABButtonCheckbox">Show "Preview" button</label>
 		</div>
 		
 		<div class="checkboxItem">
 			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_UPDATE_BUTTON_IN_ABAR ?>"
 				id="showABUpdateButtonCheckbox" value="1" <?php echo $showUpdateButtonInAdminBarChecked ?> />
-			<label for="showABUpdateButtonCheckbox">Show Update Button in Admin Bar</label>
+			<label for="showABUpdateButtonCheckbox">Show "Update" button</label>
 		</div>
 		
 		<div class="checkboxItem">
 			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_TITLE_IN_ABAR ?>"
 				id="showABTitleCheckbox" value="1" <?php echo $showTitleInAdminBarChecked ?> />
-			<label for="showABTitleCheckbox">Show Post Title in Admin Bar</label>
+			<label for="showABTitleCheckbox">Show "Post/Page Title"</label>
 		</div>
 		
 		<hr />
 		
-		<h3>Fullscreen Settings</h3>
+		<h3>Fullscreen Admin Bar Settings</h3>
 		
 		<div class="checkboxItem">
 			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_KEEP_FS_TOOLBAR_VISIBLE ?>"
 				id="keepFSToolbarVisibleCheckbox" value="1" <?php echo $keepFSToolbarVisibleChecked ?> />
-			<label for="keepFSToolbarVisibleCheckbox">Don't auto-hide Fullscreen Toolbar</label>
+			<label for="keepFSToolbarVisibleCheckbox">Always show "Fullscreen Admin Bar" (don't auto hide)</label>
 		</div>
 		
 		<div class="checkboxItem">
 			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_VIEWPOST_BUTTON_IN_FS ?>"
 				id="showFSViewPostwButtonCheckbox" value="1" <?php echo $showViewPostButtonInFullscreenChecked ?> />
-			<label for="showFSViewPostwButtonCheckbox">Show View Post Button in Fullscreen edit mode</label>
+			<label for="showFSViewPostwButtonCheckbox">Show "View Post" button</label>
 		</div>
 		
 		<div class="checkboxItem">
 			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_PREVIEW_BUTTON_IN_FS ?>"
 				id="showFSPreviewButtonCheckbox" value="1" <?php echo $showPreviewButtonInFullscreenChecked ?> />
-			<label for="showFSPreviewButtonCheckbox">Show Preview Button in Fullscreen edit mode</label>
+			<label for="showFSPreviewButtonCheckbox">Show "Preview" button</label>
 		</div>
-		
-		<hr />
-		
-		<h3>Advanced Settings</h3>
 		
 		<div class="checkboxItem">
 			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_ADMINBAR_IN_FULLSCREEN ?>"
 				id="showAdminBarInFullscreenCheckbox" value="1" <?php echo $showAdminBarInFullscreenChecked ?> />
-			<label for="showAdminBarInFullscreenCheckbox">Don't hide Admin Bar in Fullscreen edit mode</label>
+			<label for="showAdminBarInFullscreenCheckbox">Don't hide "Main Admin Bar" in Fullscreen</label>
+		</div>
+		
+		<hr />
+		
+		<h3>General Settings</h3>
+		
+		<div class="checkboxItem">
+			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_VIEW_POST_IN_NEW_TAB ?>"
+				id="viewPostInNewTabCheckbox" value="1" <?php echo $viewPostInNewTabChecked ?> />
+			<label for="viewPostInNewTabCheckbox">Make all "View Post" links open up the link in a new tab</label>
 		</div>
 		
 		<div class="buttonPanel">

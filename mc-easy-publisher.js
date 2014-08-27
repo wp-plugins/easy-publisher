@@ -55,6 +55,11 @@ jQuery(function () {
 			jQuery('#fullscreen-topbar').addClass('keep_visible');
 
 		}
+		
+		if (MCEasyPublisher.settings.viewPostInNewTab) {
+			jQuery('#view-post-btn a').attr('target', 'newWindow');
+			jQuery('#wp-admin-bar-view a').attr('target', 'newWindow');
+		}
 	}
 	
 });

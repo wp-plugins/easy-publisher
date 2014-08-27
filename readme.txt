@@ -18,14 +18,21 @@ editing so you'll know what page you're on when working in multiple tabs.
 
 = Plugin Features =
 
-*   Places the Preview Changes, Update, and Publish button in the 
-    Admin Bar.
-*   Displays the Title of the post or page you are editing.
-*   Individual buttons can be turned off in the settings page.
-*   Extremely lightweight.  Only 19.9 kB uncompressed.
-*   Saves headaches caused by having to scroll up to preview, 
-	update, or publish, or need to see the title of the page
-	you are editing.
+<iframe width="420" height="315" src="//www.youtube.com/embed/WtWTPBQOV4M" 
+frameborder="0" allowfullscreen></iframe>
+
+* Places the Preview Changes, Update, Publish, button in the Admin Bar.
+
+* Displays the Title of the post or page you are editing.
+
+* Changes the 'View Post' button to view in a new tab.
+
+* Individual features can be turned off in the settings page.
+
+* Extremely lightweight.  Only 19.9 kB uncompressed.
+
+* Saves headaches caused by having to scroll up to preview, update, or 
+publish, or need to see the title of the page you are editing.
 
 == Installation ==
 
@@ -52,7 +59,7 @@ the constant need to scroll up the page to find the links in the standard
 WordPress interface.  TLDR: You don’t have to scroll so much.
 
 Q: What if I don’t need all the links Easy Publisher adds to the admin bar?
-A: Just click “Settings” -> “Easy Publisher” to turn on and off links and 
+A: Just click "Settings" -> "Easy Publisher" to turn on and off links and 
 features with Easy Publisher.  It’s super easy!
 
 Q: Is there a premium version of Easy Publisher?
@@ -68,8 +75,12 @@ WordPress development firm.  Enjoy!
 
 == Changelog ==
 
-= 1.0.0 =
-2014.08.22 - First release
+= 1.0.0 - 2014.08.22 =
+- First release.
+
+= 1.1.0 - 2014.08.27 =
+- Added feature to 'View Post' in a new tab.
+
 
 == Upgrade Notice ==
 
