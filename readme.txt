@@ -16,8 +16,7 @@ in the Admin Bar to make editing content in WordPress much easier!
 Easy Publisher also displays the Title of the post or page you are 
 editing so you'll know what page you're on when working in multiple tabs.
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/WtWTPBQOV4M" 
-frameborder="0" allowfullscreen></iframe>
+[youtube http://www.youtube.com/embed/WtWTPBQOV4M]
 
 = Plugin Features =
 
