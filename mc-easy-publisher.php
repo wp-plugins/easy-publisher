@@ -5,12 +5,12 @@
 /*
 Plugin Name: Easy Publisher
 Description: Add easy-to-access publishing tools to your posts & pages.
-Version: 1.1.0
+Version: 1.2.0
 Author: Marketing Clique, Andrew Oikle
 Author URI: http://www.marketingclique.com/
 Requires at least: 3.7.4
-Tested up to: 3.9.2
-Stable tag: 1.1.0
+Tested up to: 4.0.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -31,7 +31,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-define('MC_EASY_PUBLISHER_VERSION', '1.1.0');
+define('MC_EASY_PUBLISHER_VERSION', '1.2.0');
 define('MC_EASY_PUBLISHER_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('MC_EASY_PUBLISHER_PLUGIN_URI', plugin_dir_url(__FILE__));
 
@@ -44,7 +44,6 @@ if (!class_exists('MCEasyPublisher')) {
 
 		function __construct() {
 			add_action('admin_menu', array(&$this, 'add_menu'));
-			add_action('init', array( &$this, 'init' ));
 			add_action('admin_enqueue_scripts', array(&$this, 'init_admin'));
 			add_action('wp_ajax_mceu_ajax_action', array(&$this, 'init_admin'));
 			add_action('admin_bar_menu', array(&$this, 'place_buttons'), 100);
@@ -96,58 +95,49 @@ if (!class_exists('MCEasyPublisher')) {
 		}
 
 		public function init_admin() {
-			
+
 			$this->controller = new MCEasyPublisherController();
 				
-			if (isset($_REQUEST['mcepAction'])) {
-			
-				$action = $_REQUEST['mcepAction'];
-				
-			} else if (isset($_REQUEST['page'])) {
-				$page = str_replace('|', ':', $_REQUEST['page']);
-				if(strpos($page, ':')) {
-					$pageArray = explode(':', $page);
-					$controllerName = $pageArray[0];
+			if (isset($_REQUEST['page']) && $_REQUEST['page'] == 'MCEasyPublisher') {
 					
-					if ($controllerName != 'MCEasyPublisherController') {
-						return;
+				if (isset($_REQUEST['mcepAction'])) {
+					$action = $_REQUEST['mcepAction'];
+				} else {
+					$action = 'ViewSettings';
+				}
+	
+				if ($action != null || method_exists($this->controller, $action) == true) {
+	
+					try {
+						
+						$this->controller->$action();
+						
+					} catch (Exception $ex) {
+	
+						// Nothing actually needs to be done about this right here.
 					}
-					
-					$action = $pageArray[1];					
+	
+					if (file_exists(MC_EASY_PUBLISHER_PLUGIN_PATH.$this->controller->viewName.'.css')) {
+						wp_enqueue_style(
+						'msep_'.$this->controller->viewName.'_css',
+						MC_EASY_PUBLISHER_PLUGIN_URI.$this->controller->viewName.'.css',
+						array(),
+						null
+						);
+					}
+	
+					if (file_exists(MC_EASY_PUBLISHER_PLUGIN_PATH.$this->controller->viewName.'.js')) {
+						wp_enqueue_script(
+						'mcep_'.$this->controller->viewName.'_js',
+						MC_EASY_PUBLISHER_PLUGIN_URI.$this->controller->viewName.'.js',
+						array('jquery'),
+						null,
+						true
+						);
+					}
 				}
-			} else  {
-				return;
-			}
-
-			if ($action != null || method_exists($this->controller, $action) == true) {
-
-				try {
-					
-					$this->controller->$action();
-					
-				} catch (Exception $ex) {
-
-					// Nothing actually needs to be done about this right here.
-				}
-
-				if (file_exists(MC_EASY_PUBLISHER_PLUGIN_PATH.$this->controller->viewName.'.css')) {
-					wp_enqueue_style(
-					'msep_'.$this->controller->viewName.'_css',
-					MC_EASY_PUBLISHER_PLUGIN_URI.$this->controller->viewName.'.css',
-					array(),
-					null
-					);
-				}
-
-				if (file_exists(MC_EASY_PUBLISHER_PLUGIN_PATH.$this->controller->viewName.'.js')) {
-					wp_enqueue_script(
-					'mcep_'.$this->controller->viewName.'_js',
-					MC_EASY_PUBLISHER_PLUGIN_URI.$this->controller->viewName.'.js',
-					array('jquery'),
-					null,
-					true
-					);
-				}
+			} else {
+				return false;
 			}
 		}
 
@@ -192,11 +182,6 @@ if (!class_exists('MCEasyPublisher')) {
 			self::_deactivate();
 		}
 
-
-		public static function init() {
-		}
-
-
 		// WP Admin functions
 
 		public function add_menu() {
@@ -206,7 +191,7 @@ if (!class_exists('MCEasyPublisher')) {
 				'Easy Publisher',
 				'Easy Publisher',
 				'manage_options',
-				'MCEasyPublisherController|ViewSettings',
+				'MCEasyPublisher',
 				array( &$this, 'init_view' )
 			);
 
@@ -223,8 +208,7 @@ if (class_exists('MCEasyPublisher')) {
 
 	// instantiate the plugin class
 	$mcEasyPublisherPlugin = new MCEasyPublisher();
-
-	// Add a link to the settings page onto the plugin page
+	
 	if (isset($mcEasyPublisherPlugin)) {
 
 		$plugin = plugin_basename(__FILE__);

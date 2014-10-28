@@ -2,8 +2,8 @@
 Contributors: Marketing Clique, Andrew Oikle
 Tags: admin bar, preview, update, publish, post title
 Requires at least: 3.7.4
-Tested up to: 3.9.2
-Stable tag: 1.1.0
+Tested up to: 4.0.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,11 +72,14 @@ WordPress development firm.  Enjoy!
 
 == Changelog ==
 
-= 1.0.0 - 2014.08.22 =
-- First release.
+= 1.2.0 - 2014.10.28 =
+- Fixed issues with 4.0.
 
 = 1.1.0 - 2014.08.27 =
 - Added feature to 'View Post' in a new tab.
+
+= 1.0.0 - 2014.08.22 =
+- First release.
 
 
 == Upgrade Notice ==
