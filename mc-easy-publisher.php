@@ -5,12 +5,12 @@
 /*
 Plugin Name: Easy Publisher
 Description: Add easy-to-access publishing tools to your posts & pages.
-Version: 1.2.0
+Version: 1.3.0
 Author: Marketing Clique, Andrew Oikle
 Author URI: http://www.marketingclique.com/
 Requires at least: 3.7.4
-Tested up to: 4.0.0
-Stable tag: 1.2.0
+Tested up to: 4.1.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -31,7 +31,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
-define('MC_EASY_PUBLISHER_VERSION', '1.2.0');
+define('MC_EASY_PUBLISHER_VERSION', '1.3.0');
 define('MC_EASY_PUBLISHER_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('MC_EASY_PUBLISHER_PLUGIN_URI', plugin_dir_url(__FILE__));
 

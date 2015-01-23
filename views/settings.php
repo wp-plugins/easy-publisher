@@ -35,6 +35,12 @@
 	$messages = $this->controller->messages;
 	$errors = $this->controller->errors;
 	
+	// The fullscreen options are obsolete as of version 4.1
+	// so hide them.
+	$versionArray = explode('.', get_bloginfo('version'));
+	$versionMajor = intval($versionArray[0]);
+	$versionMinor = intval($versionArray[1]);
+	$hideFullscreenOptions = ($versionMajor >= 4 && $versionMinor >= 0);
 ?>
 <div class="wrap" id="EasyPublisherSettingsPage">
 
@@ -95,33 +101,38 @@
 		
 		<hr />
 		
-		<h3>Fullscreen Admin Bar Settings</h3>
-		
-		<div class="checkboxItem">
-			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_KEEP_FS_TOOLBAR_VISIBLE ?>"
-				id="keepFSToolbarVisibleCheckbox" value="1" <?php echo $keepFSToolbarVisibleChecked ?> />
-			<label for="keepFSToolbarVisibleCheckbox">Always show "Fullscreen Admin Bar" (don't auto hide)</label>
+		<?php 
+			$displayCSS = ($hideFullscreenOptions) ? 'style="display: none;"' : '';
+		?>
+		<div class="fullScreenOptions" <?= $displayCSS ?>>
+			<h3>Fullscreen Admin Bar Settings</h3>
+			
+			<div class="checkboxItem">
+				<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_KEEP_FS_TOOLBAR_VISIBLE ?>"
+					id="keepFSToolbarVisibleCheckbox" value="1" <?php echo $keepFSToolbarVisibleChecked ?> />
+				<label for="keepFSToolbarVisibleCheckbox">Always show "Fullscreen Admin Bar" (don't auto hide)</label>
+			</div>
+			
+			<div class="checkboxItem">
+				<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_VIEWPOST_BUTTON_IN_FS ?>"
+					id="showFSViewPostwButtonCheckbox" value="1" <?php echo $showViewPostButtonInFullscreenChecked ?> />
+				<label for="showFSViewPostwButtonCheckbox">Show "View Post" button</label>
+			</div>
+			
+			<div class="checkboxItem">
+				<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_PREVIEW_BUTTON_IN_FS ?>"
+					id="showFSPreviewButtonCheckbox" value="1" <?php echo $showPreviewButtonInFullscreenChecked ?> />
+				<label for="showFSPreviewButtonCheckbox">Show "Preview" button</label>
+			</div>
+			
+			<div class="checkboxItem">
+				<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_ADMINBAR_IN_FULLSCREEN ?>"
+					id="showAdminBarInFullscreenCheckbox" value="1" <?php echo $showAdminBarInFullscreenChecked ?> />
+				<label for="showAdminBarInFullscreenCheckbox">Don't hide "Main Admin Bar" in Fullscreen</label>
+			</div>
+			
+			<hr />
 		</div>
-		
-		<div class="checkboxItem">
-			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_VIEWPOST_BUTTON_IN_FS ?>"
-				id="showFSViewPostwButtonCheckbox" value="1" <?php echo $showViewPostButtonInFullscreenChecked ?> />
-			<label for="showFSViewPostwButtonCheckbox">Show "View Post" button</label>
-		</div>
-		
-		<div class="checkboxItem">
-			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_PREVIEW_BUTTON_IN_FS ?>"
-				id="showFSPreviewButtonCheckbox" value="1" <?php echo $showPreviewButtonInFullscreenChecked ?> />
-			<label for="showFSPreviewButtonCheckbox">Show "Preview" button</label>
-		</div>
-		
-		<div class="checkboxItem">
-			<input type="checkbox" name="<?php echo MCEasyPublisherSettingsManager::SETTING_SHOW_ADMINBAR_IN_FULLSCREEN ?>"
-				id="showAdminBarInFullscreenCheckbox" value="1" <?php echo $showAdminBarInFullscreenChecked ?> />
-			<label for="showAdminBarInFullscreenCheckbox">Don't hide "Main Admin Bar" in Fullscreen</label>
-		</div>
-		
-		<hr />
 		
 		<h3>General Settings</h3>
 		

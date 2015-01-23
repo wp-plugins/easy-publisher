@@ -2,7 +2,7 @@
 Contributors: Marketing Clique, Andrew Oikle
 Tags: admin bar, preview, update, publish, post title
 Requires at least: 3.7.4
-Tested up to: 4.0.0
+Tested up to: 4.1
 Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -71,6 +71,9 @@ WordPress development firm.  Enjoy!
 3. Screenshot #3
 
 == Changelog ==
+
+= 1.3.0 - 2014.10.28 =
+- Hide fullscreen options for version 4.1 and above.
 
 = 1.2.0 - 2014.10.28 =
 - Fixed issues with 4.0.
